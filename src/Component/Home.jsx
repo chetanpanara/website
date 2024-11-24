@@ -8,7 +8,7 @@ export default function Home() {
   const [users, setusers] = useState([]);
 
   useEffect(() => { 
-    axios.get(`http://localhost:5001/data`)
+    axios.get(`https://mywebsite-agbt.onrender.com//data`)
       .then(result => { 
         setusers(result.data)
       
