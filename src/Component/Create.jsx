@@ -13,7 +13,7 @@ export default function Create() {
 
   const submit = (e) => { 
     e.preventDefault();
-    axios.post("http://localhost:5001/createuser", {name,email})
+    axios.post("https://mywebsitebackend-r0e9.onrender.com/createuser", {name,email})
       .then(result => { 
         console.log(result);
         navigate('/');
