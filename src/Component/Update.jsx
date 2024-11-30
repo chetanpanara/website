@@ -11,7 +11,7 @@ export default function Update() {
   const navigate = useNavigate();
 
   useEffect(() => { 
-    axios.get('https://mywebsitebackend-r0e9.onrender.com/getuser/' + id)
+    axios.get('http://localhost:5001/getuser/' + id)
       .then(result => { 
         console.log(result)
         setname(result.data.name)
@@ -22,7 +22,7 @@ export default function Update() {
   
    const update = (e) => { 
     e.preventDefault();
-    axios.put("https://mywebsitebackend-r0e9.onrender.com/updateuser/"+id, {name,email})
+    axios.put("http://localhost:5001/updateuser/"+id, {name,email})
       .then(result => { 
         console.log(result);
        
