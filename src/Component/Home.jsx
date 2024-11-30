@@ -8,7 +8,7 @@ export default function Home() {
   const [users, setusers] = useState([]);
 
   useEffect(() => { 
-    axios.get('http://localhost:5001/data')
+    axios.get('https://backend-1-nmm5.onrender.com/data')
       .then(result => { 
         setusers(result.data)
       
@@ -19,7 +19,7 @@ export default function Home() {
 
   const handeldelete = (id) => { 
     console.log(id);
-    axios.delete('http://localhost:5001/deleteuser/'+id)
+    axios.delete('https://backend-1-nmm5.onrender.com/deleteuser/'+id)
       .then(res => { 
         console.log(res)
         window.location.reload();
